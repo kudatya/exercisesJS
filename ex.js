@@ -12,3 +12,5 @@
       alert(user.surname);
   }
   workWithObject();
+
+// Второе задание хаха
