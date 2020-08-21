@@ -11,6 +11,20 @@
       delete user.name;
       alert(user.surname);
   }
-  workWithObject();
+ // workWithObject();
 
 // Второе задание хаха
+  function  isEmpty(obj) {
+    for(let key in obj){
+           return false;
+
+  }
+          return true;
+}
+  let emptyobj = {};
+  alert(isEmpty(emptyobj));
+  let notEmptyObj = {
+      name: "Alice"
+  }
+  alert(isEmpty(notEmptyObj));
+
