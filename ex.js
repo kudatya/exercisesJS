@@ -52,11 +52,12 @@
   
   function multiplyNumeric(obj) {
       for(let key in obj){
-
-          obj[key] *= 2;
+          if(typeof obj[key] == 'number') {
+              obj[key] *= 2;
+          }
       }
   }
   multiplyNumeric(menu);
 
-  alert(menu.title);
+  alert(menu.width);
 
