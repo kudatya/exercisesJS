@@ -22,9 +22,23 @@
           return true;
 }
   let emptyobj = {};
-  alert(isEmpty(emptyobj));
+  //alert(isEmpty(emptyobj));
   let notEmptyObj = {
       name: "Alice"
   }
-  alert(isEmpty(notEmptyObj));
+  //alert(isEmpty(notEmptyObj));
 
+// ex. 4 Сумма свойств объекта
+  let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+  };
+  let sum = 0;
+  function sumSalaries(obj) {
+      for (let key in obj){
+          sum += obj[key];
+      }
+      alert(sum);
+  }
+  sumSalaries(salaries);
