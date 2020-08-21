@@ -1,5 +1,5 @@
 
-// Первое задание
+// Первое задание ветка
   function workWithObject() {
       let user = {
           name   :  "John",
