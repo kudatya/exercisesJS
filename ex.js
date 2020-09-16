@@ -13,7 +13,7 @@
   }
  // workWithObject();
 
-// Второе задание хаха
+// Второе задание
   function  isEmpty(obj) {
     for(let key in obj){
            return false;
@@ -57,7 +57,30 @@
           }
       }
   }
-  multiplyNumeric(menu);
+ // multiplyNumeric(menu);
 
-  alert(menu.width);
+  //alert(menu.width);
 
+  console.log(1);
+
+
+  // задачи Методы объекта, "this"
+
+// Создайте калькулятор
+  let calculator = {
+      read(){
+          this.number1 = +prompt('a?', 0);
+          this.number2 = +prompt('b?', 0);
+      },
+      sum(){
+         return this.number1 + this.number2;
+     },
+
+     mul(){
+         return this.number1 * this.number2;
+     }
+  };
+
+  calculator.read();
+  alert( calculator.sum() );
+  alert( calculator.mul() );
