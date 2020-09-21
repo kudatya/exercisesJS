@@ -81,6 +81,55 @@
      }
   };
 
-  calculator.read();
+  /*calculator.read();
   alert( calculator.sum() );
-  alert( calculator.mul() );
+  alert( calculator.mul() );*/
+
+  
+  // Цепь вызовов
+
+  let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+        return this;
+    },
+    down() {
+        this.step--;
+        return this;
+    },
+    showStep: function() { // показывает текущую ступеньку
+        alert( this.step );
+        return this;
+    }
+  };
+
+ // ladder.up().up().down().showStep();
+
+  // ex 2 calculator
+  function Calculator2(){
+      this.read = function (num1, num2) {
+          this.num1 = +prompt("Number1",0);
+          this.num2 = +prompt("Number1",0);
+          return this.num1, this.num2;
+      }
+      this.sum = function () {
+          return  sum = this.num1 + this.num2;
+      }
+      this.mul = function () {
+          return mul = this.num1 * this.num2;
+      }
+      this.div = function () {
+          return div = this.num1 / this.num2;
+      }
+      this.dim = function () {
+          return dim = this.num1 - this.num2;
+      }
+  }
+  let calculator2 = new Calculator2();
+  calculator2.read();
+
+  alert( "Sum=" + calculator2.sum() );
+  alert( "Mul=" + calculator2.mul() );
+  alert( "Div=" + calculator2.div() );
+  alert( "Dim=" + calculator2.dim() );
