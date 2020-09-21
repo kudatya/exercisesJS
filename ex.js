@@ -133,3 +133,4 @@
   alert( "Mul=" + calculator2.mul() );
   alert( "Div=" + calculator2.div() );
   alert( "Dim=" + calculator2.dim() );
+  //hh
