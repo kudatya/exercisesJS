@@ -126,11 +126,28 @@
           return dim = this.num1 - this.num2;
       }
   }
-  let calculator2 = new Calculator2();
+  /*let calculator2 = new Calculator2();
   calculator2.read();
 
   alert( "Sum=" + calculator2.sum() );
   alert( "Mul=" + calculator2.mul() );
   alert( "Div=" + calculator2.div() );
-  alert( "Dim=" + calculator2.dim() );
-//jj
+  alert( "Dim=" + calculator2.dim() );*/
+
+  // ex Accumulator
+  function Accumulator(startingValue) {
+      this.startingValue = startingValue;
+      this.read = function () {
+          this.addValue = +prompt("Number1",0);
+          this.startingValue += this.addValue;
+          return this.startingValue;
+      }
+
+      this.val = function () {
+          let val = 0;
+          return val += this.startingValue;
+      }
+  }
+  let accumulator = new Accumulator(1); // начальное значение 1
+  accumulator.read();
+  alert("Сумма значений:  " + accumulator.val() );
